@@ -1,0 +1,4 @@
+ext {
+    capacitorAndroidVersion = '7.4.2'
+    kotlinVersion = '1.9.10'
+}

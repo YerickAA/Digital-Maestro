@@ -1,0 +1,9 @@
+rootProject.name = 'digitalmaestro'
+
+include ':capacitor-cordova-android-plugins'
+project(':capacitor-cordova-android-plugins').projectDir = new File('./capacitor-cordova-android-plugins')
+
+include ':app'
+
+// Include Capacitor plugins
+apply from: 'capacitor.settings.gradle'

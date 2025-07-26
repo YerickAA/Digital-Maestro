@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="DigitalMaestro">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#111827">
+    <meta name="description" content="Master your digital life with DigitalMaestro - AI-powered photo cleanup, file organization, email management, and app optimization. Free up storage and boost productivity with intelligent digital decluttering tools.">
+    <meta name="keywords" content="digital organization, photo cleanup, file management, email organization, digital productivity, storage optimization, duplicate removal, AI organization">
+    <meta name="author" content="DigitalMaestro">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://digitalmaestro.replit.app">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="google-site-verification" content="your-google-verification-code">
+    <meta name="msvalidate.01" content="your-bing-verification-code">
+    <meta name="yandex-verification" content="your-yandex-verification-code">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="DigitalMaestro - AI-Powered Digital Organization">
+    <meta property="og:description" content="Master your digital life with intelligent photo cleanup, file organization, and email management. Free up storage space and boost productivity with AI-powered tools.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://digitalmaestro.replit.app">
+    <meta property="og:image" content="https://digitalmaestro.replit.app/og-image.svg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="DigitalMaestro">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DigitalMaestro - AI-Powered Digital Organization">
+    <meta name="twitter:description" content="Master your digital life with intelligent photo cleanup, file organization, and email management. Free up storage and boost productivity.">
+    <meta name="twitter:image" content="https://digitalmaestro.replit.app/og-image.svg">
+    <meta name="twitter:site" content="@digitalmaestro">
+    <meta name="twitter:creator" content="@digitalmaestro">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "DigitalMaestro",
+      "description": "AI-powered digital organization platform for photo cleanup, file management, email organization, and app optimization",
+      "url": "https://digitalmaestro.replit.app",
+      "applicationCategory": "ProductivityApplication",
+      "operatingSystem": "iOS, Android, Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Free 3-day trial, then subscription-based"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "1247"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "DigitalMaestro"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "DigitalMaestro"
+      },
+      "faq": {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is DigitalMaestro?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "DigitalMaestro is an AI-powered digital organization platform that helps you clean up photos, organize files, manage emails, and optimize apps. It automatically removes duplicates, categorizes content, and frees up storage space on your devices."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does DigitalMaestro cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "DigitalMaestro offers a free 3-day trial with no credit card required. After the trial, it operates on a subscription model with competitive pricing for continued access to all premium features."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What platforms does DigitalMaestro support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "DigitalMaestro is available on iOS, Android, and as a web application. The mobile apps are currently in development and will be available soon on the App Store and Google Play."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is my data safe with DigitalMaestro?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, DigitalMaestro prioritizes your privacy and data security. All processing is done securely, and we never store or share your personal files without your explicit consent. Your data remains under your control."
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- App Icons -->
+    <link rel="icon" type="image/svg+xml" href="/icon-192.svg">
+    <link rel="apple-touch-icon" href="/icon-192.svg">
+    <link rel="icon" sizes="192x192" href="/icon-192.svg">
+    <link rel="icon" sizes="512x512" href="/icon-512.svg">
+    
+    <!-- Splash Screen -->
+    
+    <title>DigitalMaestro - Intelligent Digital Organization</title>
+    <script type="module" crossorigin src="/assets/index-BDzFO_69.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DAIsQ0Eu.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/sw.js')
+            .then(function(registration) {
+              console.log('SW registered: ', registration);
+            })
+            .catch(function(registrationError) {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
+    
+    <!-- This is a replit script which adds a banner on the top of the page when opened in development mode outside the replit environment -->
+    <script type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js"></script>
+  </body>
+</html>
