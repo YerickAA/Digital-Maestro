@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#111827;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Main Title -->
+  <text x="600" y="200" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="72" font-weight="bold">
+    DigitalMaestro
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="280" text-anchor="middle" fill="#9ca3af" font-family="Arial, sans-serif" font-size="36">
+    AI-Powered Digital Organization
+  </text>
+  
+  <!-- Feature Icons and Text -->
+  <g transform="translate(150, 350)">
+    <!-- Photo Icon -->
+    <rect x="0" y="0" width="60" height="60" rx="15" fill="#3b82f6" opacity="0.2"/>
+    <text x="30" y="40" text-anchor="middle" fill="#3b82f6" font-family="Arial, sans-serif" font-size="32">📸</text>
+    <text x="30" y="90" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16">Photo Cleanup</text>
+  </g>
+  
+  <g transform="translate(350, 350)">
+    <!-- File Icon -->
+    <rect x="0" y="0" width="60" height="60" rx="15" fill="#10b981" opacity="0.2"/>
+    <text x="30" y="40" text-anchor="middle" fill="#10b981" font-family="Arial, sans-serif" font-size="32">📁</text>
+    <text x="30" y="90" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16">File Organization</text>
+  </g>
+  
+  <g transform="translate(550, 350)">
+    <!-- Email Icon -->
+    <rect x="0" y="0" width="60" height="60" rx="15" fill="#8b5cf6" opacity="0.2"/>
+    <text x="30" y="40" text-anchor="middle" fill="#8b5cf6" font-family="Arial, sans-serif" font-size="32">📧</text>
+    <text x="30" y="90" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16">Email Management</text>
+  </g>
+  
+  <g transform="translate(750, 350)">
+    <!-- App Icon -->
+    <rect x="0" y="0" width="60" height="60" rx="15" fill="#f59e0b" opacity="0.2"/>
+    <text x="30" y="40" text-anchor="middle" fill="#f59e0b" font-family="Arial, sans-serif" font-size="32">📱</text>
+    <text x="30" y="90" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16">App Optimization</text>
+  </g>
+  
+  <!-- Call to Action -->
+  <text x="600" y="520" text-anchor="middle" fill="url(#textGradient)" font-family="Arial, sans-serif" font-size="32" font-weight="bold">
+    Master Your Digital Life
+  </text>
+  
+  <!-- Website URL -->
+  <text x="600" y="570" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="24">
+    digitalmaestro.replit.app
+  </text>
+</svg>

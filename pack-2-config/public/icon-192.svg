@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="192" height="192" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="96" cy="96" r="96" fill="url(#gradient)" />
+  
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#007AFF;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#4A90E2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5856D6;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Letter Shadow -->
+    <filter id="letterShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Letter D -->
+  <path d="M40 48 L40 144 L72 144 Q112 144 112 96 Q112 48 72 48 Z M56 64 L72 64 Q96 64 96 96 Q96 128 72 128 L56 128 Z" 
+        fill="white" 
+        filter="url(#letterShadow)"
+        stroke="none" />
+  
+  <!-- Letter G -->
+  <path d="M152 72 Q152 48 128 48 Q104 48 104 72 L104 120 Q104 144 128 144 Q152 144 152 120 L152 104 L136 104 L136 120 Q136 128 128 128 Q120 128 120 120 L120 72 Q120 64 128 64 Q136 64 136 72 L152 72 Z" 
+        fill="white" 
+        filter="url(#letterShadow)"
+        stroke="none" />
+  
+  <!-- Subtle highlight -->
+  <circle cx="96" cy="96" r="88" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+  
+  <!-- Inner glow -->
+  <circle cx="96" cy="96" r="80" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+</svg>

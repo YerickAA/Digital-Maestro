@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="256" cy="256" r="256" fill="url(#gradient)" />
+  
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#007AFF;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#4A90E2;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#6366F1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5856D6;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Letter Shadow -->
+    <filter id="letterShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+    
+    <!-- Inner Shadow -->
+    <filter id="innerShadow">
+      <feFlood flood-color="#000000" flood-opacity="0.1"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  
+  <!-- Letter D -->
+  <path d="M108 128 L108 384 L192 384 Q299 384 299 256 Q299 128 192 128 Z M149 171 L192 171 Q256 171 256 256 Q256 341 192 341 L149 341 Z" 
+        fill="white" 
+        filter="url(#letterShadow)"
+        stroke="none" />
+  
+  <!-- Letter G -->
+  <path d="M405 192 Q405 128 341 128 Q277 128 277 192 L277 320 Q277 384 341 384 Q405 384 405 320 L405 277 L363 277 L363 320 Q363 341 341 341 Q320 341 320 320 L320 192 Q320 171 341 171 Q363 171 363 192 L405 192 Z" 
+        fill="white" 
+        filter="url(#letterShadow)"
+        stroke="none" />
+  
+  <!-- Subtle highlight rings -->
+  <circle cx="256" cy="256" r="235" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="3"/>
+  <circle cx="256" cy="256" r="220" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+  <circle cx="256" cy="256" r="210" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+</svg>

@@ -1,0 +1,12 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="24" cy="24" r="24" fill="#007AFF" />
+  
+  <!-- Letter D -->
+  <path d="M10 12 L10 36 L18 36 Q28 36 28 24 Q28 12 18 12 Z M14 16 L18 16 Q24 16 24 24 Q24 32 18 32 L14 32 Z" 
+        fill="white" />
+  
+  <!-- Letter G -->
+  <path d="M38 18 Q38 12 32 12 Q26 12 26 18 L26 30 Q26 36 32 36 Q38 36 38 30 L38 26 L34 26 L34 30 Q34 32 32 32 Q30 32 30 30 L30 18 Q30 16 32 16 Q34 16 34 18 L38 18 Z" 
+        fill="white" />
+</svg>
