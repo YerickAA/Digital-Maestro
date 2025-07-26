@@ -1,0 +1,560 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide scrollbar for mobile */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari, Opera */
+}
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(28, 8%, 25%);
+  --muted: hsl(60, 4.8%, 97%);
+  --muted-foreground: hsl(25, 5.3%, 55%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(28, 8%, 25%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(28, 8%, 25%);
+  --border: hsl(20, 5.9%, 93%);
+  --input: hsl(20, 5.9%, 93%);
+  --primary: hsl(207, 60%, 65%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(28, 10%, 11%);
+  --radius: 0.5rem;
+  
+  /* iOS-style colors - lighter version */
+  --ios-blue: hsl(207, 60%, 65%);
+  --ios-green: hsl(142, 50%, 55%);
+  --ios-orange: hsl(28, 70%, 65%);
+  --ios-red: hsl(4, 60%, 70%);
+  --ios-gray: hsl(240, 8%, 98%);
+  --ios-gray-2: hsl(240, 8%, 95%);
+  --ios-gray-3: hsl(240, 5%, 65%);
+  --ios-dark: hsl(240, 8%, 20%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply overflow-x-hidden bg-gray-900;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  body {
+    @apply font-sans antialiased bg-gray-900 text-white overflow-x-hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+    width: 100vw;
+    min-height: 100vh;
+    min-height: 100dvh;
+    position: relative;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@layer utilities {
+  .ios-blue {
+    color: var(--ios-blue);
+  }
+  
+  .bg-ios-blue {
+    background-color: var(--ios-blue);
+  }
+  
+  .bg-ios-green {
+    background-color: var(--ios-green);
+  }
+  
+  .bg-ios-orange {
+    background-color: var(--ios-orange);
+  }
+  
+  .bg-ios-red {
+    background-color: var(--ios-red);
+  }
+  
+  .bg-ios-gray {
+    background-color: var(--ios-gray);
+  }
+  
+  .bg-ios-gray-2 {
+    background-color: var(--ios-gray-2);
+  }
+  
+  .bg-ios-green\/10 {
+    background-color: hsl(142, 50%, 55%, 0.1);
+  }
+  
+  .bg-ios-blue\/10 {
+    background-color: hsl(207, 60%, 65%, 0.1);
+  }
+  
+  .bg-ios-orange\/10 {
+    background-color: hsl(28, 70%, 65%, 0.1);
+  }
+  
+  .bg-ios-red\/10 {
+    background-color: hsl(4, 60%, 70%, 0.1);
+  }
+  
+  .text-ios-blue {
+    color: var(--ios-blue);
+  }
+  
+  .text-ios-green {
+    color: var(--ios-green);
+  }
+  
+  .text-ios-orange {
+    color: var(--ios-orange);
+  }
+  
+  .text-ios-red {
+    color: var(--ios-red);
+  }
+  
+  .text-ios-gray-3 {
+    color: var(--ios-gray-3);
+  }
+  
+  .text-ios-dark {
+    color: var(--ios-dark);
+  }
+  
+  .border-ios-gray-2 {
+    border-color: var(--ios-gray-2);
+  }
+  
+  .border-ios-blue {
+    border-color: var(--ios-blue);
+  }
+  
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+  
+  .safe-area-inset-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  .safe-area-inset-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .pt-safe-top {
+    padding-top: env(safe-area-inset-top, 44px);
+  }
+
+  .pb-safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 20px);
+  }
+
+  .min-h-screen-safe {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+}
+
+/* Tour-specific styles */
+.tour-highlight {
+  position: relative;
+  z-index: 1001;
+}
+
+.tour-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.tour-spotlight {
+  position: absolute;
+  border: 2px solid var(--ios-blue);
+  border-radius: 12px;
+  pointer-events: none;
+  z-index: 1001;
+}
+
+/* Hide scrollbar for webkit browsers */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Disable text selection for better mobile experience */
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent pull-to-refresh and overscroll behaviors */
+html, body {
+  overscroll-behavior-y: none;
+  overscroll-behavior-x: none;
+  touch-action: manipulation;
+}
+
+/* Prevent accidental navigation on mobile */
+.main-content {
+  touch-action: manipulation;
+  overscroll-behavior: none;
+}
+
+/* Disable pull-to-refresh specifically */
+@supports (-webkit-overflow-scrolling: touch) {
+  html, body {
+    -webkit-overflow-scrolling: auto;
+  }
+}
+
+/* Prevent pull-to-refresh on mobile browsers */
+body {
+  position: relative;
+  overflow: auto;
+}
+
+/* Prevent rubber band scrolling on iOS */
+body {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+}
+
+/* Disable Chrome's pull-to-refresh */
+body {
+  overscroll-behavior-y: none;
+}
+
+/* Fix for iOS safe area */
+@supports (padding: env(safe-area-inset-top)) {
+  .safe-area-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.animate-fade-in-delay {
+  animation: fadeIn 0.8s ease-out 0.2s both;
+}
+
+.animate-fade-in-up {
+  animation: fadeIn 1s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out;
+}
+
+.animate-slide-up-delay {
+  animation: slideUp 0.6s ease-out 0.1s both;
+}
+
+.animate-slide-up-delay-2 {
+  animation: slideUp 0.6s ease-out 0.2s both;
+}
+
+.animate-slide-up-delay-3 {
+  animation: slideUp 0.6s ease-out 0.3s both;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+}
+
+/* Page Load Animations */
+@keyframes pageLoad {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-page-load {
+  animation: pageLoad 0.8s ease-out forwards;
+}
+
+.animate-slide-in-top {
+  animation: slideInFromTop 0.8s ease-out forwards;
+}
+
+.animate-slide-in-top-delay {
+  animation: slideInFromTop 0.8s ease-out 0.3s both;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.9s ease-out 0.4s both;
+}
+
+.animate-scale-in-delay {
+  animation: scaleIn 0.9s ease-out 0.6s both;
+}
+
+/* Scrollbar hide utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Fix for any white background bleeding */
+*::before,
+*::after {
+  background-color: inherit;
+}
+
+/* Ensure root element has dark background */
+#root {
+  @apply bg-gray-900 min-h-screen;
+}
+
+/* Fix viewport background */
+:root {
+  background-color: #111827 !important;
+}
+
+/* Override any default browser styles */
+html, body, #root {
+  background-color: #111827 !important;
+}
+
+/* Mobile viewport fixes - remove height restrictions */
+@supports (height: 100dvh) {
+  html, body {
+    min-height: 100dvh;
+  }
+}
+
+/* iOS Safari mobile viewport fix */
+@supports (-webkit-appearance: none) {
+  html, body {
+    min-height: -webkit-fill-available;
+  }
+  
+  /* Safari-specific viewport fix */
+  .min-h-screen {
+    min-height: -webkit-fill-available;
+  }
+}
+
+/* Mobile safe area support - apply to body instead of html */
+@supports (padding: env(safe-area-inset-top)) {
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Enable smooth scrolling everywhere */
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Ensure body can scroll properly */
+body {
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Fix mobile browser address bar issues */
+.min-h-screen {
+  min-height: 100vh;
+  min-height: 100dvh;
+  min-height: -webkit-fill-available;
+}
+
+/* Safari-specific fixes for blue status bar */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  /* Safari only */
+  html {
+    background-color: #111827 !important;
+    padding-top: 0 !important;
+  }
+  
+  body {
+    background-color: #111827 !important;
+    padding-top: 0 !important;
+  }
+  
+  /* Remove any blue background from viewport */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Force dark background on all elements */
+  html, body, #root {
+    background: #111827 !important;
+    color: white !important;
+  }
+}
+
+/* Remove overscroll restrictions that cause locks */
+* {
+  overscroll-behavior: auto;
+}
+
+/* Ensure all elements can scroll naturally */
+html, body, #root {
+  overscroll-behavior: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Fix any remaining scroll issues */
+.min-h-screen {
+  min-height: 100vh;
+}
+
+/* Perfect scrolling behavior reset */
+html {
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  scroll-behavior: smooth !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+body {
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+/* Remove all scroll restrictions */
+* {
+  overscroll-behavior: auto !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Ensure main container can scroll */
+#root {
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+/* Remove any conflicting styles */
+.min-h-screen, .min-h-[100dvh] {
+  min-height: 100vh !important;
+  height: auto !important;
+}
